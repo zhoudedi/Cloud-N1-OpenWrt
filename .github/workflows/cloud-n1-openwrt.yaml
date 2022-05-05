@@ -12,7 +12,6 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: .config
   SCRIPT_SH: script.sh
   CONFIG_SH: config.sh
   UPLOAD_FIRMWARE: true
@@ -99,7 +98,8 @@ jobs:
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/*.tar.gz
         PACKAGE_SOC: s905d
-        KERNEL_VERSION_NAME: 5.15.36
+        KERNEL_VERSION_NAME: 5.17.5
+        WHOAMI: huangqian8
 
     - name: Organize files
       id: organize
